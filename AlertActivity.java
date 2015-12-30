@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -25,11 +24,11 @@ public class AlertActivity extends AppCompatActivity {
         setTitle("Emergency");
         Bundle extras = getIntent().getExtras();
         secondlocation = (Location) extras.get("secondlocation");
-        Log.i("In maps activity", "value of seconf location" + String.valueOf(secondlocation));
+        //Log.i("In maps activity", "value of seconf location" + String.valueOf(secondlocation));
         myloc = (Location) extras.get("mylocation");
-        Log.i("In maps activity", "value of my location" + String.valueOf(myloc));
+       // Log.i("In maps activity", "value of my location" + String.valueOf(myloc));
         senderobjectId = extras.getString("userobjectId");
-        Log.i("In maps activity", "value of sender object Id" + senderobjectId);
+       // Log.i("In maps activity", "value of sender object Id" + senderobjectId);
 
 
         new AlertDialog.Builder(AlertActivity.this)   // it generates alertbox to process the request
