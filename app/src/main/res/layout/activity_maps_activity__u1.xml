@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:map="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="370dp" android:id="@+id/map" tools:context="com.example.snehaljoshi.locationplay.MapsActivity_U1"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/map"
+        android:id="@+id/ll_ver"
+        android:weightSum="1"
+
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:background="#f4e4e4">
+
+        <Switch
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:text="FIre"
+            android:id="@+id/sw_fire"
+            android:checked="false"
+            android:layout_weight="0.36"
+            android:background="#f4e4e4"
+            android:showText="true"
+            android:singleLine="false"
+            android:splitTrack="false" />
+
+        <Switch
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:text="MEdical"
+            android:id="@+id/sw_medical"
+            android:layout_weight="0.36"
+            android:checked="false"
+
+            android:background="#f4e4e4"
+            android:showText="true" />
+
+        <Switch
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:text="Police"
+            android:id="@+id/sw_police"
+            android:layout_weight="0.14"
+            android:checked="false"
+            android:background="#f4e4e4"
+            android:showText="true"
+            android:enabled="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_ver"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dp"
+        android:weightSum="1"
+        android:background="@color/wallet_hint_foreground_holo_light"
+        android:id="@+id/ll_vert">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimate time for Fire:"
+            android:id="@+id/tv_msg2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.31"
+            android:background="#fcfcfc"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimate Time for Medical:"
+            android:id="@+id/tv_msg1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.31"
+            android:background="#fcfcfc"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv_msg"
+            android:layout_weight="0.30"
+            android:gravity="left"
+            android:inputType="text"
+            android:background="#fcfcfc"
+            android:nestedScrollingEnabled="true"
+            android:autoText="false"
+            android:text="Estimate time For Police:"
+            android:textSize="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Request"
+            android:id="@+id/bt_request"
+            android:layout_gravity="center_horizontal" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
